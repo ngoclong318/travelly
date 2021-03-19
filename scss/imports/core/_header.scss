@@ -1,0 +1,18 @@
+header {
+  background-color: $main;
+  height: 80px;
+  position: fixed;
+  .container-fluid {
+    @include betweenflex;
+    align-items: center;
+    height: 100%;
+    padding: 0 80px 0 80px;
+    .header__logo {
+      p {
+        font-family: $pat;
+        color: white;
+        font-size: $fz-h4;
+      }
+    }
+  }
+}

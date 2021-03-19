@@ -1,0 +1,14 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  background-color: $butt;
+  width: 100px;
+  height: 50px;
+  color: white;
+  &:hover {
+    background-color: $hover;
+  }
+}
