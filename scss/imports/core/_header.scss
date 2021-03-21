@@ -1,7 +1,9 @@
 header {
   background-color: $main;
+  width: 100%;
   height: 80px;
   position: fixed;
+  z-index: 9;
   .container-fluid {
     @include betweenflex;
     align-items: center;

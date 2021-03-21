@@ -15,7 +15,6 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: auto;
   // @include text($fz-text, fmain, $lh-text, $text-cl, none);
-
   position: relative;
   @include custom-scrollbar();
   .main_wrapper {

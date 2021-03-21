@@ -5,10 +5,36 @@ a {
 
 button {
   background-color: $butt;
-  width: 100px;
-  height: 50px;
+  width: 120px;
+  height: 40px;
   color: white;
+  font-family: $pop;
+  font-size: 16px;
+  border: none;
   &:hover {
     background-color: $hover;
+    transition: 0.4s;
   }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    background-color: $butt;
+    transition: 0.1s;
+  }
+  cursor: pointer;
+}
+
+/* HEADINGS - TEXTS */
+h2 {
+  color: $white-cl;
+  font-family: $pop;
+  font-size: $fz-h2;
+  font-weight: bold;
+}
+
+p {
+  color: $white-cl;
+  font-family: $pop;
+  font-size: $fz-text;
 }

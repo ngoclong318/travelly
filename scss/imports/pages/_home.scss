@@ -1,8 +1,90 @@
-.home_wrapper {
-  background-color: aqua;
+body {
+  background-color: black;
+}
 
-  .banner {
-    .container-fluid {
+.banner {
+  height: 728px;
+  margin-top: 80px;
+  @include midflex;
+  flex-direction: column;
+  background-image: url(/img/images/landing-page.jpg);
+  background-color: $main; /* Used if the image is unavailable */
+  background-position: center;
+  background-size: cover; /* Resize the background image to cover the entire container */
+  .banner-cover {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 728px;
+  }
+  .container-fluid {
+    z-index: 1;
+    .banner__content {
+      @include midflex;
+      flex-direction: column;
+      h2 {
+        margin-bottom: 40px;
+      }
+      p {
+        @include midflex;
+        flex-direction: column;
+        span {
+          margin-bottom: 20px;
+        }
+      }
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.pr {
+  @extend .banner;
+  margin-top: 0;
+  background-image: linear-gradient(grey, white);
+  z-index: 1;
+
+  // ======== IMAGES COMBINATION FOR BACKGROUND ===========
+  .pr-cloud {
+    position: absolute;
+    background-image: url(/img/images/cloud.png);
+    width: 100%;
+    height: 728px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+  }
+  .pr-city {
+    position: absolute;
+    background-image: url(/img/images/new-york-page.png);
+    width: 100%;
+    height: 728px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+  }
+  .pr-cloud-up {
+    @extend .pr-cloud;
+    z-index: 4;
+    background-position: 700px 0px;
+  }
+  // ======================
+  .container-fluid {
+    // background: chartreuse;
+    z-index: 5;
+    .pr__content {
+      padding: 0 60px 0 60px;
+      h2 {
+        color: $black-cl;
+        text-decoration: underline;
+        margin-bottom: 40px;
+      }
+      p {
+        color: $black-cl;
+        font-size: $fz-h4;
+      }
     }
   }
 }
