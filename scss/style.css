@@ -1,6 +1,6 @@
 /* Core variables and mixins*/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, p, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -96,7 +96,7 @@ body .main_wrapper {
 
 a {
   text-decoration: none;
-  color: white;
+  color: #fff;
 }
 
 button {
@@ -127,17 +127,20 @@ button:active {
 }
 
 /* HEADINGS - TEXTS */
-h2 {
+h2, h3, p {
   color: #fff;
   font-family: "Poppins";
   font-size: 40px;
   font-weight: bold;
 }
 
+h3 {
+  font-size: 28px;
+}
+
 p {
-  color: #fff;
-  font-family: "Poppins";
   font-size: 20px;
+  font-weight: normal;
 }
 
 /*!
@@ -2368,7 +2371,7 @@ body {
           flex-direction: column;
 }
 
-.banner .container-fluid .banner__content h2, .pr .container-fluid .banner__content h2 {
+.banner .container-fluid .banner__content h2, .pr .container-fluid .banner__content h2, .banner .container-fluid .banner__content h3, .pr .container-fluid .banner__content h3, .banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p {
   margin-bottom: 40px;
 }
 
@@ -2437,7 +2440,7 @@ body {
   padding: 0 60px 0 60px;
 }
 
-.pr .container-fluid .pr__content h2 {
+.pr .container-fluid .pr__content h2, .pr .container-fluid .pr__content h3, .pr .container-fluid .pr__content p {
   color: #000;
   text-decoration: underline;
   margin-bottom: 40px;
@@ -2446,5 +2449,122 @@ body {
 .pr .container-fluid .pr__content p {
   color: #000;
   font-size: 24px;
+}
+
+.service .container-fluid {
+  padding: 0;
+  /* ============= CARDS ============*/
+}
+
+.service .container-fluid .service-title {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #131c27;
+  padding-bottom: 20px;
+}
+
+.service .container-fluid .service-title h2, .service .container-fluid .service-title h3, .service .container-fluid .service-title p {
+  margin: 30px 0 20px 0;
+}
+
+.service .container-fluid .service-title p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.service .container-fluid .service-title p span {
+  margin-bottom: 15px;
+}
+
+.service .container-fluid .service-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 80px 80px 80px 80px;
+  background-color: #fff;
+}
+
+.service .container-fluid .service-cards .card__travel, .service .container-fluid .service-cards .card__hotel, .service .container-fluid .service-cards .card__flight {
+  background-color: #fff;
+  width: 300px;
+  height: 250px;
+  -webkit-box-shadow: 8px 8px 5px lightgray;
+          box-shadow: 8px 8px 5px lightgray;
+}
+
+.service .container-fluid .service-cards .card__travel .card__travel--icon, .service .container-fluid .service-cards .card__hotel .card__travel--icon, .service .container-fluid .service-cards .card__flight .card__travel--icon, .service .container-fluid .service-cards .card__hotel .card__hotel--icon, .service .container-fluid .service-cards .card__flight .card__flight--icon {
+  background-color: #27394e;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5px;
+}
+
+.service .container-fluid .service-cards .card__travel .card__travel--icon img, .service .container-fluid .service-cards .card__hotel .card__travel--icon img, .service .container-fluid .service-cards .card__flight .card__travel--icon img, .service .container-fluid .service-cards .card__hotel .card__hotel--icon img, .service .container-fluid .service-cards .card__flight .card__flight--icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.service .container-fluid .service-cards .card__travel .card__travel--content, .service .container-fluid .service-cards .card__hotel .card__travel--content, .service .container-fluid .service-cards .card__flight .card__travel--content, .service .container-fluid .service-cards .card__hotel .card__hotel--content, .service .container-fluid .service-cards .card__flight .card__flight--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.service .container-fluid .service-cards .card__travel .card__travel--content .colorBlack, .service .container-fluid .service-cards .card__hotel .card__travel--content .colorBlack, .service .container-fluid .service-cards .card__flight .card__travel--content .colorBlack, .service .container-fluid .service-cards .card__hotel .card__hotel--content .colorBlack, .service .container-fluid .service-cards .card__flight .card__flight--content .colorBlack,
+.service .container-fluid .service-cards .card__travel .card__travel--content p,
+.service .container-fluid .service-cards .card__hotel .card__travel--content p,
+.service .container-fluid .service-cards .card__flight .card__travel--content p,
+.service .container-fluid .service-cards .card__hotel .card__hotel--content p,
+.service .container-fluid .service-cards .card__flight .card__flight--content p {
+  color: #000;
+  text-align: center;
+  margin: 10px 0 10px 0;
 }
 /*# sourceMappingURL=style.css.map */
