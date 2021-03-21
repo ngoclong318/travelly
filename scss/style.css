@@ -1,6 +1,6 @@
 /* Core variables and mixins*/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, p, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, p, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold, h3, h4, h5, h6, p, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -9,7 +9,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header, footer, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -22,7 +22,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, footer, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -127,7 +127,7 @@ button:active {
 }
 
 /* HEADINGS - TEXTS */
-h2, h3, p {
+h2, h3, p, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold {
   color: #fff;
   font-family: "Poppins";
   font-size: 40px;
@@ -138,7 +138,7 @@ h3 {
   font-size: 28px;
 }
 
-p {
+p, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold {
   font-size: 20px;
   font-weight: normal;
 }
@@ -2274,7 +2274,7 @@ html {
   }
 }
 /* Navigation, header, footer*/
-header {
+header, footer {
   background-color: #131c27;
   width: 100%;
   height: 80px;
@@ -2282,7 +2282,7 @@ header {
   z-index: 9;
 }
 
-header .container-fluid {
+header .container-fluid, footer .container-fluid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2297,10 +2297,8 @@ header .container-fluid {
   padding: 0 80px 0 80px;
 }
 
-header .container-fluid .header__logo p {
+header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold {
   font-family: "Pattaya";
-  color: white;
-  font-size: 24px;
 }
 
 nav a {
@@ -2313,6 +2311,27 @@ nav a:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: salmon;
+}
+
+footer {
+  position: relative;
+}
+
+footer .container-fluid .footer__logo .bold {
+  font-weight: bold;
+}
+
+footer .container-fluid .footer__icons {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* Pages*/
@@ -2371,11 +2390,11 @@ body {
           flex-direction: column;
 }
 
-.banner .container-fluid .banner__content h2, .pr .container-fluid .banner__content h2, .banner .container-fluid .banner__content h3, .pr .container-fluid .banner__content h3, .banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p {
+.banner .container-fluid .banner__content h2, .pr .container-fluid .banner__content h2, .banner .container-fluid .banner__content h3, .pr .container-fluid .banner__content h3, .banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p, .banner header .container-fluid .banner__content .header__logo .bold, header .banner .container-fluid .banner__content .header__logo .bold, .banner header .container-fluid .header__logo .banner__content .bold, header .banner .container-fluid .header__logo .banner__content .bold, .pr header .container-fluid .banner__content .header__logo .bold, header .pr .container-fluid .banner__content .header__logo .bold, .pr header .container-fluid .header__logo .banner__content .bold, header .pr .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .header__logo .bold, footer .banner .container-fluid .banner__content .header__logo .bold, .banner footer .container-fluid .header__logo .banner__content .bold, footer .banner .container-fluid .header__logo .banner__content .bold, .pr footer .container-fluid .banner__content .header__logo .bold, footer .pr .container-fluid .banner__content .header__logo .bold, .pr footer .container-fluid .header__logo .banner__content .bold, footer .pr .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .footer__logo .bold, footer .banner .container-fluid .banner__content .footer__logo .bold, .banner footer .container-fluid .footer__logo .banner__content .bold, footer .banner .container-fluid .footer__logo .banner__content .bold, .pr footer .container-fluid .banner__content .footer__logo .bold, footer .pr .container-fluid .banner__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .banner__content .bold, footer .pr .container-fluid .footer__logo .banner__content .bold {
   margin-bottom: 40px;
 }
 
-.banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p {
+.banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p, .banner header .container-fluid .banner__content .header__logo .bold, header .banner .container-fluid .banner__content .header__logo .bold, .banner header .container-fluid .header__logo .banner__content .bold, header .banner .container-fluid .header__logo .banner__content .bold, .pr header .container-fluid .banner__content .header__logo .bold, header .pr .container-fluid .banner__content .header__logo .bold, .pr header .container-fluid .header__logo .banner__content .bold, header .pr .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .header__logo .bold, footer .banner .container-fluid .banner__content .header__logo .bold, .banner footer .container-fluid .header__logo .banner__content .bold, footer .banner .container-fluid .header__logo .banner__content .bold, .pr footer .container-fluid .banner__content .header__logo .bold, footer .pr .container-fluid .banner__content .header__logo .bold, .pr footer .container-fluid .header__logo .banner__content .bold, footer .pr .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .footer__logo .bold, footer .banner .container-fluid .banner__content .footer__logo .bold, .banner footer .container-fluid .footer__logo .banner__content .bold, footer .banner .container-fluid .footer__logo .banner__content .bold, .pr footer .container-fluid .banner__content .footer__logo .bold, footer .pr .container-fluid .banner__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .banner__content .bold, footer .pr .container-fluid .footer__logo .banner__content .bold {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2391,7 +2410,7 @@ body {
           flex-direction: column;
 }
 
-.banner .container-fluid .banner__content p span, .pr .container-fluid .banner__content p span {
+.banner .container-fluid .banner__content p span, .pr .container-fluid .banner__content p span, .banner header .container-fluid .banner__content .header__logo .bold span, header .banner .container-fluid .banner__content .header__logo .bold span, .banner header .container-fluid .header__logo .banner__content .bold span, header .banner .container-fluid .header__logo .banner__content .bold span, .pr header .container-fluid .banner__content .header__logo .bold span, header .pr .container-fluid .banner__content .header__logo .bold span, .pr header .container-fluid .header__logo .banner__content .bold span, header .pr .container-fluid .header__logo .banner__content .bold span, .banner footer .container-fluid .banner__content .header__logo .bold span, footer .banner .container-fluid .banner__content .header__logo .bold span, .banner footer .container-fluid .header__logo .banner__content .bold span, footer .banner .container-fluid .header__logo .banner__content .bold span, .pr footer .container-fluid .banner__content .header__logo .bold span, footer .pr .container-fluid .banner__content .header__logo .bold span, .pr footer .container-fluid .header__logo .banner__content .bold span, footer .pr .container-fluid .header__logo .banner__content .bold span, .banner footer .container-fluid .banner__content .footer__logo .bold span, footer .banner .container-fluid .banner__content .footer__logo .bold span, .banner footer .container-fluid .footer__logo .banner__content .bold span, footer .banner .container-fluid .footer__logo .banner__content .bold span, .pr footer .container-fluid .banner__content .footer__logo .bold span, footer .pr .container-fluid .banner__content .footer__logo .bold span, .pr footer .container-fluid .footer__logo .banner__content .bold span, footer .pr .container-fluid .footer__logo .banner__content .bold span {
   margin-bottom: 20px;
 }
 
@@ -2440,13 +2459,13 @@ body {
   padding: 0 60px 0 60px;
 }
 
-.pr .container-fluid .pr__content h2, .pr .container-fluid .pr__content h3, .pr .container-fluid .pr__content p {
+.pr .container-fluid .pr__content h2, .pr .container-fluid .pr__content h3, .pr .container-fluid .pr__content p, .pr header .container-fluid .pr__content .header__logo .bold, header .pr .container-fluid .pr__content .header__logo .bold, .pr header .container-fluid .header__logo .pr__content .bold, header .pr .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .header__logo .bold, footer .pr .container-fluid .pr__content .header__logo .bold, .pr footer .container-fluid .header__logo .pr__content .bold, footer .pr .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .footer__logo .bold, footer .pr .container-fluid .pr__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .pr__content .bold, footer .pr .container-fluid .footer__logo .pr__content .bold {
   color: #000;
   text-decoration: underline;
   margin-bottom: 40px;
 }
 
-.pr .container-fluid .pr__content p {
+.pr .container-fluid .pr__content p, .pr header .container-fluid .pr__content .header__logo .bold, header .pr .container-fluid .pr__content .header__logo .bold, .pr header .container-fluid .header__logo .pr__content .bold, header .pr .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .header__logo .bold, footer .pr .container-fluid .pr__content .header__logo .bold, .pr footer .container-fluid .header__logo .pr__content .bold, footer .pr .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .footer__logo .bold, footer .pr .container-fluid .pr__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .pr__content .bold, footer .pr .container-fluid .footer__logo .pr__content .bold {
   color: #000;
   font-size: 24px;
 }
@@ -2475,11 +2494,11 @@ body {
   padding-bottom: 20px;
 }
 
-.service .container-fluid .service-title h2, .service .container-fluid .service-title h3, .service .container-fluid .service-title p {
+.service .container-fluid .service-title h2, .service .container-fluid .service-title h3, .service .container-fluid .service-title p, .service header .container-fluid .service-title .header__logo .bold, header .service .container-fluid .service-title .header__logo .bold, .service header .container-fluid .header__logo .service-title .bold, header .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .header__logo .bold, footer .service .container-fluid .service-title .header__logo .bold, .service footer .container-fluid .header__logo .service-title .bold, footer .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .footer__logo .bold, footer .service .container-fluid .service-title .footer__logo .bold, .service footer .container-fluid .footer__logo .service-title .bold, footer .service .container-fluid .footer__logo .service-title .bold {
   margin: 30px 0 20px 0;
 }
 
-.service .container-fluid .service-title p {
+.service .container-fluid .service-title p, .service header .container-fluid .service-title .header__logo .bold, header .service .container-fluid .service-title .header__logo .bold, .service header .container-fluid .header__logo .service-title .bold, header .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .header__logo .bold, footer .service .container-fluid .service-title .header__logo .bold, .service footer .container-fluid .header__logo .service-title .bold, footer .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .footer__logo .bold, footer .service .container-fluid .service-title .footer__logo .bold, .service footer .container-fluid .footer__logo .service-title .bold, footer .service .container-fluid .footer__logo .service-title .bold {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2495,7 +2514,7 @@ body {
           flex-direction: column;
 }
 
-.service .container-fluid .service-title p span {
+.service .container-fluid .service-title p span, .service header .container-fluid .service-title .header__logo .bold span, header .service .container-fluid .service-title .header__logo .bold span, .service header .container-fluid .header__logo .service-title .bold span, header .service .container-fluid .header__logo .service-title .bold span, .service footer .container-fluid .service-title .header__logo .bold span, footer .service .container-fluid .service-title .header__logo .bold span, .service footer .container-fluid .header__logo .service-title .bold span, footer .service .container-fluid .header__logo .service-title .bold span, .service footer .container-fluid .service-title .footer__logo .bold span, footer .service .container-fluid .service-title .footer__logo .bold span, .service footer .container-fluid .footer__logo .service-title .bold span, footer .service .container-fluid .footer__logo .service-title .bold span {
   margin-bottom: 15px;
 }
 
@@ -2562,7 +2581,67 @@ body {
 .service .container-fluid .service-cards .card__hotel .card__travel--content p,
 .service .container-fluid .service-cards .card__flight .card__travel--content p,
 .service .container-fluid .service-cards .card__hotel .card__hotel--content p,
-.service .container-fluid .service-cards .card__flight .card__flight--content p {
+.service .container-fluid .service-cards .card__flight .card__flight--content p,
+.service header .container-fluid .service-cards .card__travel .card__travel--content .header__logo .bold,
+header .service .container-fluid .service-cards .card__travel .card__travel--content .header__logo .bold,
+.service header .container-fluid .header__logo .service-cards .card__travel .card__travel--content .bold,
+header .service .container-fluid .header__logo .service-cards .card__travel .card__travel--content .bold,
+.service header .container-fluid .service-cards .card__hotel .card__travel--content .header__logo .bold,
+header .service .container-fluid .service-cards .card__hotel .card__travel--content .header__logo .bold,
+.service header .container-fluid .header__logo .service-cards .card__hotel .card__travel--content .bold,
+header .service .container-fluid .header__logo .service-cards .card__hotel .card__travel--content .bold,
+.service header .container-fluid .service-cards .card__flight .card__travel--content .header__logo .bold,
+header .service .container-fluid .service-cards .card__flight .card__travel--content .header__logo .bold,
+.service header .container-fluid .header__logo .service-cards .card__flight .card__travel--content .bold,
+header .service .container-fluid .header__logo .service-cards .card__flight .card__travel--content .bold,
+.service header .container-fluid .service-cards .card__hotel .card__hotel--content .header__logo .bold,
+header .service .container-fluid .service-cards .card__hotel .card__hotel--content .header__logo .bold,
+.service header .container-fluid .header__logo .service-cards .card__hotel .card__hotel--content .bold,
+header .service .container-fluid .header__logo .service-cards .card__hotel .card__hotel--content .bold,
+.service header .container-fluid .service-cards .card__flight .card__flight--content .header__logo .bold,
+header .service .container-fluid .service-cards .card__flight .card__flight--content .header__logo .bold,
+.service header .container-fluid .header__logo .service-cards .card__flight .card__flight--content .bold,
+header .service .container-fluid .header__logo .service-cards .card__flight .card__flight--content .bold,
+.service footer .container-fluid .service-cards .card__travel .card__travel--content .header__logo .bold,
+footer .service .container-fluid .service-cards .card__travel .card__travel--content .header__logo .bold,
+.service footer .container-fluid .header__logo .service-cards .card__travel .card__travel--content .bold,
+footer .service .container-fluid .header__logo .service-cards .card__travel .card__travel--content .bold,
+.service footer .container-fluid .service-cards .card__hotel .card__travel--content .header__logo .bold,
+footer .service .container-fluid .service-cards .card__hotel .card__travel--content .header__logo .bold,
+.service footer .container-fluid .header__logo .service-cards .card__hotel .card__travel--content .bold,
+footer .service .container-fluid .header__logo .service-cards .card__hotel .card__travel--content .bold,
+.service footer .container-fluid .service-cards .card__flight .card__travel--content .header__logo .bold,
+footer .service .container-fluid .service-cards .card__flight .card__travel--content .header__logo .bold,
+.service footer .container-fluid .header__logo .service-cards .card__flight .card__travel--content .bold,
+footer .service .container-fluid .header__logo .service-cards .card__flight .card__travel--content .bold,
+.service footer .container-fluid .service-cards .card__hotel .card__hotel--content .header__logo .bold,
+footer .service .container-fluid .service-cards .card__hotel .card__hotel--content .header__logo .bold,
+.service footer .container-fluid .header__logo .service-cards .card__hotel .card__hotel--content .bold,
+footer .service .container-fluid .header__logo .service-cards .card__hotel .card__hotel--content .bold,
+.service footer .container-fluid .service-cards .card__flight .card__flight--content .header__logo .bold,
+footer .service .container-fluid .service-cards .card__flight .card__flight--content .header__logo .bold,
+.service footer .container-fluid .header__logo .service-cards .card__flight .card__flight--content .bold,
+footer .service .container-fluid .header__logo .service-cards .card__flight .card__flight--content .bold,
+.service footer .container-fluid .service-cards .card__travel .card__travel--content .footer__logo .bold,
+footer .service .container-fluid .service-cards .card__travel .card__travel--content .footer__logo .bold,
+.service footer .container-fluid .footer__logo .service-cards .card__travel .card__travel--content .bold,
+footer .service .container-fluid .footer__logo .service-cards .card__travel .card__travel--content .bold,
+.service footer .container-fluid .service-cards .card__hotel .card__travel--content .footer__logo .bold,
+footer .service .container-fluid .service-cards .card__hotel .card__travel--content .footer__logo .bold,
+.service footer .container-fluid .footer__logo .service-cards .card__hotel .card__travel--content .bold,
+footer .service .container-fluid .footer__logo .service-cards .card__hotel .card__travel--content .bold,
+.service footer .container-fluid .service-cards .card__flight .card__travel--content .footer__logo .bold,
+footer .service .container-fluid .service-cards .card__flight .card__travel--content .footer__logo .bold,
+.service footer .container-fluid .footer__logo .service-cards .card__flight .card__travel--content .bold,
+footer .service .container-fluid .footer__logo .service-cards .card__flight .card__travel--content .bold,
+.service footer .container-fluid .service-cards .card__hotel .card__hotel--content .footer__logo .bold,
+footer .service .container-fluid .service-cards .card__hotel .card__hotel--content .footer__logo .bold,
+.service footer .container-fluid .footer__logo .service-cards .card__hotel .card__hotel--content .bold,
+footer .service .container-fluid .footer__logo .service-cards .card__hotel .card__hotel--content .bold,
+.service footer .container-fluid .service-cards .card__flight .card__flight--content .footer__logo .bold,
+footer .service .container-fluid .service-cards .card__flight .card__flight--content .footer__logo .bold,
+.service footer .container-fluid .footer__logo .service-cards .card__flight .card__flight--content .bold,
+footer .service .container-fluid .footer__logo .service-cards .card__flight .card__flight--content .bold {
   color: #000;
   text-align: center;
   margin: 10px 0 10px 0;

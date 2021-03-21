@@ -10,10 +10,9 @@ header {
     height: 100%;
     padding: 0 80px 0 80px;
     .header__logo {
-      p {
+      .bold {
+        @extend p;
         font-family: $pat;
-        color: white;
-        font-size: $fz-h4;
       }
     }
   }

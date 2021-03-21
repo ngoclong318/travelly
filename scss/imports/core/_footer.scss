@@ -1,0 +1,16 @@
+footer {
+  @extend header;
+  position: relative;
+  .container-fluid {
+    .footer__logo {
+      .bold {
+        font-weight: bold;
+        @extend p;
+      }
+    }
+    .footer__icons {
+      width: 40%;
+      @include betweenflex;
+    }
+  }
+}
