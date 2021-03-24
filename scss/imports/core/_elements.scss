@@ -42,3 +42,22 @@ p {
   font-size: $fz-text;
   font-weight: normal;
 }
+
+label {
+  @extend p;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 250px;
+  height: 40px;
+  &:focus {
+    outline: none;
+  }
+  padding-left: 5px;
+  color: $butt;
+  font-weight: bold;
+  font-size: $fz-text-m;
+  text-transform: uppercase;
+}

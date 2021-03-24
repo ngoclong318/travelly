@@ -1,6 +1,6 @@
 /* Core variables and mixins*/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, p, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold, h3, h4, h5, h6, p, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold, blockquote, pre,
+h1, h2, h3, p, label, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold, h3, h4, h5, h6, p, label, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -127,7 +127,7 @@ button:active {
 }
 
 /* HEADINGS - TEXTS */
-h2, h3, p, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold {
+h2, h3, p, label, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold {
   color: #fff;
   font-family: "Poppins";
   font-size: 40px;
@@ -138,9 +138,28 @@ h3 {
   font-size: 28px;
 }
 
-p, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold {
+p, label, header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold, footer .container-fluid .footer__logo .bold {
   font-size: 20px;
   font-weight: normal;
+}
+
+label {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  width: 250px;
+  height: 40px;
+  padding-left: 5px;
+  color: #4c6e97;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+input:focus {
+  outline: none;
 }
 
 /*!
@@ -2299,6 +2318,7 @@ header .container-fluid, footer .container-fluid {
 
 header .container-fluid .header__logo .bold, footer .container-fluid .header__logo .bold {
   font-family: "Pattaya";
+  font-size: 28px;
 }
 
 nav a {
@@ -2339,7 +2359,7 @@ body {
   background-color: black;
 }
 
-.banner, .pr {
+.banner, .pr, .contact {
   height: 728px;
   margin-top: 80px;
   display: -webkit-box;
@@ -2363,18 +2383,18 @@ body {
   /* Resize the background image to cover the entire container */
 }
 
-.banner .banner-cover, .pr .banner-cover {
+.banner .banner-cover, .pr .banner-cover, .contact .banner-cover {
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
   height: 728px;
 }
 
-.banner .container-fluid, .pr .container-fluid {
+.banner .container-fluid, .pr .container-fluid, .contact .container-fluid {
   z-index: 1;
 }
 
-.banner .container-fluid .banner__content, .pr .container-fluid .banner__content {
+.banner .container-fluid .banner__content, .pr .container-fluid .banner__content, .contact .container-fluid .banner__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2390,11 +2410,11 @@ body {
           flex-direction: column;
 }
 
-.banner .container-fluid .banner__content h2, .pr .container-fluid .banner__content h2, .banner .container-fluid .banner__content h3, .pr .container-fluid .banner__content h3, .banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p, .banner header .container-fluid .banner__content .header__logo .bold, header .banner .container-fluid .banner__content .header__logo .bold, .banner header .container-fluid .header__logo .banner__content .bold, header .banner .container-fluid .header__logo .banner__content .bold, .pr header .container-fluid .banner__content .header__logo .bold, header .pr .container-fluid .banner__content .header__logo .bold, .pr header .container-fluid .header__logo .banner__content .bold, header .pr .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .header__logo .bold, footer .banner .container-fluid .banner__content .header__logo .bold, .banner footer .container-fluid .header__logo .banner__content .bold, footer .banner .container-fluid .header__logo .banner__content .bold, .pr footer .container-fluid .banner__content .header__logo .bold, footer .pr .container-fluid .banner__content .header__logo .bold, .pr footer .container-fluid .header__logo .banner__content .bold, footer .pr .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .footer__logo .bold, footer .banner .container-fluid .banner__content .footer__logo .bold, .banner footer .container-fluid .footer__logo .banner__content .bold, footer .banner .container-fluid .footer__logo .banner__content .bold, .pr footer .container-fluid .banner__content .footer__logo .bold, footer .pr .container-fluid .banner__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .banner__content .bold, footer .pr .container-fluid .footer__logo .banner__content .bold {
+.banner .container-fluid .banner__content h2, .pr .container-fluid .banner__content h2, .contact .container-fluid .banner__content h2, .banner .container-fluid .banner__content h3, .pr .container-fluid .banner__content h3, .contact .container-fluid .banner__content h3, .banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p, .contact .container-fluid .banner__content p, .banner .container-fluid .banner__content label, .pr .container-fluid .banner__content label, .contact .container-fluid .banner__content label, .banner header .container-fluid .banner__content .header__logo .bold, header .banner .container-fluid .banner__content .header__logo .bold, .banner header .container-fluid .header__logo .banner__content .bold, header .banner .container-fluid .header__logo .banner__content .bold, .pr header .container-fluid .banner__content .header__logo .bold, header .pr .container-fluid .banner__content .header__logo .bold, .pr header .container-fluid .header__logo .banner__content .bold, header .pr .container-fluid .header__logo .banner__content .bold, .contact header .container-fluid .banner__content .header__logo .bold, header .contact .container-fluid .banner__content .header__logo .bold, .contact header .container-fluid .header__logo .banner__content .bold, header .contact .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .header__logo .bold, footer .banner .container-fluid .banner__content .header__logo .bold, .banner footer .container-fluid .header__logo .banner__content .bold, footer .banner .container-fluid .header__logo .banner__content .bold, .pr footer .container-fluid .banner__content .header__logo .bold, footer .pr .container-fluid .banner__content .header__logo .bold, .pr footer .container-fluid .header__logo .banner__content .bold, footer .pr .container-fluid .header__logo .banner__content .bold, .contact footer .container-fluid .banner__content .header__logo .bold, footer .contact .container-fluid .banner__content .header__logo .bold, .contact footer .container-fluid .header__logo .banner__content .bold, footer .contact .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .footer__logo .bold, footer .banner .container-fluid .banner__content .footer__logo .bold, .banner footer .container-fluid .footer__logo .banner__content .bold, footer .banner .container-fluid .footer__logo .banner__content .bold, .pr footer .container-fluid .banner__content .footer__logo .bold, footer .pr .container-fluid .banner__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .banner__content .bold, footer .pr .container-fluid .footer__logo .banner__content .bold, .contact footer .container-fluid .banner__content .footer__logo .bold, footer .contact .container-fluid .banner__content .footer__logo .bold, .contact footer .container-fluid .footer__logo .banner__content .bold, footer .contact .container-fluid .footer__logo .banner__content .bold {
   margin-bottom: 40px;
 }
 
-.banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p, .banner header .container-fluid .banner__content .header__logo .bold, header .banner .container-fluid .banner__content .header__logo .bold, .banner header .container-fluid .header__logo .banner__content .bold, header .banner .container-fluid .header__logo .banner__content .bold, .pr header .container-fluid .banner__content .header__logo .bold, header .pr .container-fluid .banner__content .header__logo .bold, .pr header .container-fluid .header__logo .banner__content .bold, header .pr .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .header__logo .bold, footer .banner .container-fluid .banner__content .header__logo .bold, .banner footer .container-fluid .header__logo .banner__content .bold, footer .banner .container-fluid .header__logo .banner__content .bold, .pr footer .container-fluid .banner__content .header__logo .bold, footer .pr .container-fluid .banner__content .header__logo .bold, .pr footer .container-fluid .header__logo .banner__content .bold, footer .pr .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .footer__logo .bold, footer .banner .container-fluid .banner__content .footer__logo .bold, .banner footer .container-fluid .footer__logo .banner__content .bold, footer .banner .container-fluid .footer__logo .banner__content .bold, .pr footer .container-fluid .banner__content .footer__logo .bold, footer .pr .container-fluid .banner__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .banner__content .bold, footer .pr .container-fluid .footer__logo .banner__content .bold {
+.banner .container-fluid .banner__content p, .pr .container-fluid .banner__content p, .contact .container-fluid .banner__content p, .banner .container-fluid .banner__content label, .pr .container-fluid .banner__content label, .contact .container-fluid .banner__content label, .banner header .container-fluid .banner__content .header__logo .bold, header .banner .container-fluid .banner__content .header__logo .bold, .banner header .container-fluid .header__logo .banner__content .bold, header .banner .container-fluid .header__logo .banner__content .bold, .pr header .container-fluid .banner__content .header__logo .bold, header .pr .container-fluid .banner__content .header__logo .bold, .pr header .container-fluid .header__logo .banner__content .bold, header .pr .container-fluid .header__logo .banner__content .bold, .contact header .container-fluid .banner__content .header__logo .bold, header .contact .container-fluid .banner__content .header__logo .bold, .contact header .container-fluid .header__logo .banner__content .bold, header .contact .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .header__logo .bold, footer .banner .container-fluid .banner__content .header__logo .bold, .banner footer .container-fluid .header__logo .banner__content .bold, footer .banner .container-fluid .header__logo .banner__content .bold, .pr footer .container-fluid .banner__content .header__logo .bold, footer .pr .container-fluid .banner__content .header__logo .bold, .pr footer .container-fluid .header__logo .banner__content .bold, footer .pr .container-fluid .header__logo .banner__content .bold, .contact footer .container-fluid .banner__content .header__logo .bold, footer .contact .container-fluid .banner__content .header__logo .bold, .contact footer .container-fluid .header__logo .banner__content .bold, footer .contact .container-fluid .header__logo .banner__content .bold, .banner footer .container-fluid .banner__content .footer__logo .bold, footer .banner .container-fluid .banner__content .footer__logo .bold, .banner footer .container-fluid .footer__logo .banner__content .bold, footer .banner .container-fluid .footer__logo .banner__content .bold, .pr footer .container-fluid .banner__content .footer__logo .bold, footer .pr .container-fluid .banner__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .banner__content .bold, footer .pr .container-fluid .footer__logo .banner__content .bold, .contact footer .container-fluid .banner__content .footer__logo .bold, footer .contact .container-fluid .banner__content .footer__logo .bold, .contact footer .container-fluid .footer__logo .banner__content .bold, footer .contact .container-fluid .footer__logo .banner__content .bold {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2410,22 +2430,22 @@ body {
           flex-direction: column;
 }
 
-.banner .container-fluid .banner__content p span, .pr .container-fluid .banner__content p span, .banner header .container-fluid .banner__content .header__logo .bold span, header .banner .container-fluid .banner__content .header__logo .bold span, .banner header .container-fluid .header__logo .banner__content .bold span, header .banner .container-fluid .header__logo .banner__content .bold span, .pr header .container-fluid .banner__content .header__logo .bold span, header .pr .container-fluid .banner__content .header__logo .bold span, .pr header .container-fluid .header__logo .banner__content .bold span, header .pr .container-fluid .header__logo .banner__content .bold span, .banner footer .container-fluid .banner__content .header__logo .bold span, footer .banner .container-fluid .banner__content .header__logo .bold span, .banner footer .container-fluid .header__logo .banner__content .bold span, footer .banner .container-fluid .header__logo .banner__content .bold span, .pr footer .container-fluid .banner__content .header__logo .bold span, footer .pr .container-fluid .banner__content .header__logo .bold span, .pr footer .container-fluid .header__logo .banner__content .bold span, footer .pr .container-fluid .header__logo .banner__content .bold span, .banner footer .container-fluid .banner__content .footer__logo .bold span, footer .banner .container-fluid .banner__content .footer__logo .bold span, .banner footer .container-fluid .footer__logo .banner__content .bold span, footer .banner .container-fluid .footer__logo .banner__content .bold span, .pr footer .container-fluid .banner__content .footer__logo .bold span, footer .pr .container-fluid .banner__content .footer__logo .bold span, .pr footer .container-fluid .footer__logo .banner__content .bold span, footer .pr .container-fluid .footer__logo .banner__content .bold span {
+.banner .container-fluid .banner__content p span, .pr .container-fluid .banner__content p span, .contact .container-fluid .banner__content p span, .banner .container-fluid .banner__content label span, .pr .container-fluid .banner__content label span, .contact .container-fluid .banner__content label span, .banner header .container-fluid .banner__content .header__logo .bold span, header .banner .container-fluid .banner__content .header__logo .bold span, .banner header .container-fluid .header__logo .banner__content .bold span, header .banner .container-fluid .header__logo .banner__content .bold span, .pr header .container-fluid .banner__content .header__logo .bold span, header .pr .container-fluid .banner__content .header__logo .bold span, .pr header .container-fluid .header__logo .banner__content .bold span, header .pr .container-fluid .header__logo .banner__content .bold span, .contact header .container-fluid .banner__content .header__logo .bold span, header .contact .container-fluid .banner__content .header__logo .bold span, .contact header .container-fluid .header__logo .banner__content .bold span, header .contact .container-fluid .header__logo .banner__content .bold span, .banner footer .container-fluid .banner__content .header__logo .bold span, footer .banner .container-fluid .banner__content .header__logo .bold span, .banner footer .container-fluid .header__logo .banner__content .bold span, footer .banner .container-fluid .header__logo .banner__content .bold span, .pr footer .container-fluid .banner__content .header__logo .bold span, footer .pr .container-fluid .banner__content .header__logo .bold span, .pr footer .container-fluid .header__logo .banner__content .bold span, footer .pr .container-fluid .header__logo .banner__content .bold span, .contact footer .container-fluid .banner__content .header__logo .bold span, footer .contact .container-fluid .banner__content .header__logo .bold span, .contact footer .container-fluid .header__logo .banner__content .bold span, footer .contact .container-fluid .header__logo .banner__content .bold span, .banner footer .container-fluid .banner__content .footer__logo .bold span, footer .banner .container-fluid .banner__content .footer__logo .bold span, .banner footer .container-fluid .footer__logo .banner__content .bold span, footer .banner .container-fluid .footer__logo .banner__content .bold span, .pr footer .container-fluid .banner__content .footer__logo .bold span, footer .pr .container-fluid .banner__content .footer__logo .bold span, .pr footer .container-fluid .footer__logo .banner__content .bold span, footer .pr .container-fluid .footer__logo .banner__content .bold span, .contact footer .container-fluid .banner__content .footer__logo .bold span, footer .contact .container-fluid .banner__content .footer__logo .bold span, .contact footer .container-fluid .footer__logo .banner__content .bold span, footer .contact .container-fluid .footer__logo .banner__content .bold span {
   margin-bottom: 20px;
 }
 
-.banner .container-fluid .banner__content button, .pr .container-fluid .banner__content button {
+.banner .container-fluid .banner__content button, .pr .container-fluid .banner__content button, .contact .container-fluid .banner__content button {
   margin-top: 20px;
 }
 
-.pr {
+.pr, .contact {
   margin-top: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(grey), to(white));
   background-image: linear-gradient(grey, white);
   z-index: 1;
 }
 
-.pr .pr-cloud, .pr .pr-cloud-up {
+.pr .pr-cloud, .contact .pr-cloud, .pr .pr-city, .contact .pr-city, .pr .pr-cloud-up, .contact .pr-cloud-up, .contact .contact-mount {
   position: absolute;
   background-image: url(/img/images/cloud.png);
   width: 100%;
@@ -2435,39 +2455,45 @@ body {
   z-index: 2;
 }
 
-.pr .pr-city {
-  position: absolute;
+.pr .pr-city, .contact .pr-city {
   background-image: url(/img/images/new-york-page.png);
-  width: 100%;
-  height: 728px;
-  background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  z-index: 2;
 }
 
-.pr .pr-cloud-up {
+.pr .pr-cloud-up, .contact .pr-cloud-up {
   z-index: 4;
-  background-position: 700px 0px;
+  background-position: 220px -100px;
 }
 
-.pr .container-fluid {
-  z-index: 5;
+.pr .container-fluid, .contact .container-fluid {
+  z-index: 3;
 }
 
-.pr .container-fluid .pr__content {
+.pr .container-fluid .pr__content, .contact .container-fluid .pr__content {
   padding: 0 60px 0 60px;
 }
 
-.pr .container-fluid .pr__content h2, .pr .container-fluid .pr__content h3, .pr .container-fluid .pr__content p, .pr header .container-fluid .pr__content .header__logo .bold, header .pr .container-fluid .pr__content .header__logo .bold, .pr header .container-fluid .header__logo .pr__content .bold, header .pr .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .header__logo .bold, footer .pr .container-fluid .pr__content .header__logo .bold, .pr footer .container-fluid .header__logo .pr__content .bold, footer .pr .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .footer__logo .bold, footer .pr .container-fluid .pr__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .pr__content .bold, footer .pr .container-fluid .footer__logo .pr__content .bold {
+.pr .container-fluid .pr__content h2, .contact .container-fluid .pr__content h2, .pr .container-fluid .pr__content h3, .contact .container-fluid .pr__content h3, .pr .container-fluid .pr__content p, .contact .container-fluid .pr__content p, .pr .container-fluid .pr__content label, .contact .container-fluid .pr__content label, .pr header .container-fluid .pr__content .header__logo .bold, header .pr .container-fluid .pr__content .header__logo .bold, .pr header .container-fluid .header__logo .pr__content .bold, header .pr .container-fluid .header__logo .pr__content .bold, .contact header .container-fluid .pr__content .header__logo .bold, header .contact .container-fluid .pr__content .header__logo .bold, .contact header .container-fluid .header__logo .pr__content .bold, header .contact .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .header__logo .bold, footer .pr .container-fluid .pr__content .header__logo .bold, .pr footer .container-fluid .header__logo .pr__content .bold, footer .pr .container-fluid .header__logo .pr__content .bold, .contact footer .container-fluid .pr__content .header__logo .bold, footer .contact .container-fluid .pr__content .header__logo .bold, .contact footer .container-fluid .header__logo .pr__content .bold, footer .contact .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .footer__logo .bold, footer .pr .container-fluid .pr__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .pr__content .bold, footer .pr .container-fluid .footer__logo .pr__content .bold, .contact footer .container-fluid .pr__content .footer__logo .bold, footer .contact .container-fluid .pr__content .footer__logo .bold, .contact footer .container-fluid .footer__logo .pr__content .bold, footer .contact .container-fluid .footer__logo .pr__content .bold {
   color: #000;
   text-decoration: underline;
   margin-bottom: 40px;
 }
 
-.pr .container-fluid .pr__content p, .pr header .container-fluid .pr__content .header__logo .bold, header .pr .container-fluid .pr__content .header__logo .bold, .pr header .container-fluid .header__logo .pr__content .bold, header .pr .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .header__logo .bold, footer .pr .container-fluid .pr__content .header__logo .bold, .pr footer .container-fluid .header__logo .pr__content .bold, footer .pr .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .footer__logo .bold, footer .pr .container-fluid .pr__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .pr__content .bold, footer .pr .container-fluid .footer__logo .pr__content .bold {
-  color: #000;
+.pr .container-fluid .pr__content p, .contact .container-fluid .pr__content p, .pr .container-fluid .pr__content label, .contact .container-fluid .pr__content label, .pr header .container-fluid .pr__content .header__logo .bold, header .pr .container-fluid .pr__content .header__logo .bold, .pr header .container-fluid .header__logo .pr__content .bold, header .pr .container-fluid .header__logo .pr__content .bold, .contact header .container-fluid .pr__content .header__logo .bold, header .contact .container-fluid .pr__content .header__logo .bold, .contact header .container-fluid .header__logo .pr__content .bold, header .contact .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .header__logo .bold, footer .pr .container-fluid .pr__content .header__logo .bold, .pr footer .container-fluid .header__logo .pr__content .bold, footer .pr .container-fluid .header__logo .pr__content .bold, .contact footer .container-fluid .pr__content .header__logo .bold, footer .contact .container-fluid .pr__content .header__logo .bold, .contact footer .container-fluid .header__logo .pr__content .bold, footer .contact .container-fluid .header__logo .pr__content .bold, .pr footer .container-fluid .pr__content .footer__logo .bold, footer .pr .container-fluid .pr__content .footer__logo .bold, .pr footer .container-fluid .footer__logo .pr__content .bold, footer .pr .container-fluid .footer__logo .pr__content .bold, .contact footer .container-fluid .pr__content .footer__logo .bold, footer .contact .container-fluid .pr__content .footer__logo .bold, .contact footer .container-fluid .footer__logo .pr__content .bold, footer .contact .container-fluid .footer__logo .pr__content .bold {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #222;
   font-size: 24px;
+  text-decoration: none;
+}
+
+.pr .container-fluid .pr__content p span, .contact .container-fluid .pr__content p span, .pr .container-fluid .pr__content label span, .contact .container-fluid .pr__content label span, .pr header .container-fluid .pr__content .header__logo .bold span, header .pr .container-fluid .pr__content .header__logo .bold span, .pr header .container-fluid .header__logo .pr__content .bold span, header .pr .container-fluid .header__logo .pr__content .bold span, .contact header .container-fluid .pr__content .header__logo .bold span, header .contact .container-fluid .pr__content .header__logo .bold span, .contact header .container-fluid .header__logo .pr__content .bold span, header .contact .container-fluid .header__logo .pr__content .bold span, .pr footer .container-fluid .pr__content .header__logo .bold span, footer .pr .container-fluid .pr__content .header__logo .bold span, .pr footer .container-fluid .header__logo .pr__content .bold span, footer .pr .container-fluid .header__logo .pr__content .bold span, .contact footer .container-fluid .pr__content .header__logo .bold span, footer .contact .container-fluid .pr__content .header__logo .bold span, .contact footer .container-fluid .header__logo .pr__content .bold span, footer .contact .container-fluid .header__logo .pr__content .bold span, .pr footer .container-fluid .pr__content .footer__logo .bold span, footer .pr .container-fluid .pr__content .footer__logo .bold span, .pr footer .container-fluid .footer__logo .pr__content .bold span, footer .pr .container-fluid .footer__logo .pr__content .bold span, .contact footer .container-fluid .pr__content .footer__logo .bold span, footer .contact .container-fluid .pr__content .footer__logo .bold span, .contact footer .container-fluid .footer__logo .pr__content .bold span, footer .contact .container-fluid .footer__logo .pr__content .bold span {
+  margin-bottom: 20px;
 }
 
 .service .container-fluid {
@@ -2494,11 +2520,11 @@ body {
   padding-bottom: 20px;
 }
 
-.service .container-fluid .service-title h2, .service .container-fluid .service-title h3, .service .container-fluid .service-title p, .service header .container-fluid .service-title .header__logo .bold, header .service .container-fluid .service-title .header__logo .bold, .service header .container-fluid .header__logo .service-title .bold, header .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .header__logo .bold, footer .service .container-fluid .service-title .header__logo .bold, .service footer .container-fluid .header__logo .service-title .bold, footer .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .footer__logo .bold, footer .service .container-fluid .service-title .footer__logo .bold, .service footer .container-fluid .footer__logo .service-title .bold, footer .service .container-fluid .footer__logo .service-title .bold {
+.service .container-fluid .service-title h2, .service .container-fluid .service-title h3, .service .container-fluid .service-title p, .service .container-fluid .service-title label, .service header .container-fluid .service-title .header__logo .bold, header .service .container-fluid .service-title .header__logo .bold, .service header .container-fluid .header__logo .service-title .bold, header .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .header__logo .bold, footer .service .container-fluid .service-title .header__logo .bold, .service footer .container-fluid .header__logo .service-title .bold, footer .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .footer__logo .bold, footer .service .container-fluid .service-title .footer__logo .bold, .service footer .container-fluid .footer__logo .service-title .bold, footer .service .container-fluid .footer__logo .service-title .bold {
   margin: 30px 0 20px 0;
 }
 
-.service .container-fluid .service-title p, .service header .container-fluid .service-title .header__logo .bold, header .service .container-fluid .service-title .header__logo .bold, .service header .container-fluid .header__logo .service-title .bold, header .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .header__logo .bold, footer .service .container-fluid .service-title .header__logo .bold, .service footer .container-fluid .header__logo .service-title .bold, footer .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .footer__logo .bold, footer .service .container-fluid .service-title .footer__logo .bold, .service footer .container-fluid .footer__logo .service-title .bold, footer .service .container-fluid .footer__logo .service-title .bold {
+.service .container-fluid .service-title p, .service .container-fluid .service-title label, .service header .container-fluid .service-title .header__logo .bold, header .service .container-fluid .service-title .header__logo .bold, .service header .container-fluid .header__logo .service-title .bold, header .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .header__logo .bold, footer .service .container-fluid .service-title .header__logo .bold, .service footer .container-fluid .header__logo .service-title .bold, footer .service .container-fluid .header__logo .service-title .bold, .service footer .container-fluid .service-title .footer__logo .bold, footer .service .container-fluid .service-title .footer__logo .bold, .service footer .container-fluid .footer__logo .service-title .bold, footer .service .container-fluid .footer__logo .service-title .bold {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2514,7 +2540,7 @@ body {
           flex-direction: column;
 }
 
-.service .container-fluid .service-title p span, .service header .container-fluid .service-title .header__logo .bold span, header .service .container-fluid .service-title .header__logo .bold span, .service header .container-fluid .header__logo .service-title .bold span, header .service .container-fluid .header__logo .service-title .bold span, .service footer .container-fluid .service-title .header__logo .bold span, footer .service .container-fluid .service-title .header__logo .bold span, .service footer .container-fluid .header__logo .service-title .bold span, footer .service .container-fluid .header__logo .service-title .bold span, .service footer .container-fluid .service-title .footer__logo .bold span, footer .service .container-fluid .service-title .footer__logo .bold span, .service footer .container-fluid .footer__logo .service-title .bold span, footer .service .container-fluid .footer__logo .service-title .bold span {
+.service .container-fluid .service-title p span, .service .container-fluid .service-title label span, .service header .container-fluid .service-title .header__logo .bold span, header .service .container-fluid .service-title .header__logo .bold span, .service header .container-fluid .header__logo .service-title .bold span, header .service .container-fluid .header__logo .service-title .bold span, .service footer .container-fluid .service-title .header__logo .bold span, footer .service .container-fluid .service-title .header__logo .bold span, .service footer .container-fluid .header__logo .service-title .bold span, footer .service .container-fluid .header__logo .service-title .bold span, .service footer .container-fluid .service-title .footer__logo .bold span, footer .service .container-fluid .service-title .footer__logo .bold span, .service footer .container-fluid .footer__logo .service-title .bold span, footer .service .container-fluid .footer__logo .service-title .bold span {
   margin-bottom: 15px;
 }
 
@@ -2536,8 +2562,8 @@ body {
   background-color: #fff;
   width: 300px;
   height: 250px;
-  -webkit-box-shadow: 8px 8px 5px lightgray;
-          box-shadow: 8px 8px 5px lightgray;
+  -webkit-box-shadow: 6px 6px 8px lightgray;
+          box-shadow: 6px 6px 8px lightgray;
 }
 
 .service .container-fluid .service-cards .card__travel .card__travel--icon, .service .container-fluid .service-cards .card__hotel .card__travel--icon, .service .container-fluid .service-cards .card__flight .card__travel--icon, .service .container-fluid .service-cards .card__hotel .card__hotel--icon, .service .container-fluid .service-cards .card__flight .card__flight--icon {
@@ -2582,6 +2608,11 @@ body {
 .service .container-fluid .service-cards .card__flight .card__travel--content p,
 .service .container-fluid .service-cards .card__hotel .card__hotel--content p,
 .service .container-fluid .service-cards .card__flight .card__flight--content p,
+.service .container-fluid .service-cards .card__travel .card__travel--content label,
+.service .container-fluid .service-cards .card__hotel .card__travel--content label,
+.service .container-fluid .service-cards .card__flight .card__travel--content label,
+.service .container-fluid .service-cards .card__hotel .card__hotel--content label,
+.service .container-fluid .service-cards .card__flight .card__flight--content label,
 .service header .container-fluid .service-cards .card__travel .card__travel--content .header__logo .bold,
 header .service .container-fluid .service-cards .card__travel .card__travel--content .header__logo .bold,
 .service header .container-fluid .header__logo .service-cards .card__travel .card__travel--content .bold,
@@ -2645,5 +2676,87 @@ footer .service .container-fluid .footer__logo .service-cards .card__flight .car
   color: #000;
   text-align: center;
   margin: 10px 0 10px 0;
+}
+
+.contact .contact-mount {
+  background-image: url(/img/images/contact-mountain.png);
+}
+
+.contact .container {
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .container .contact-content {
+  width: 800px;
+  background: rgba(19, 27, 38, 0.8);
+  border-radius: 20px;
+  padding: 10px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .container .contact-content .setMargin {
+  margin: 30px 0 50px 0;
+}
+
+.contact .container .contact-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .container .contact-content form .form__name, .contact .container .contact-content form .form__email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 360px;
+  margin-bottom: 50px;
+}
+
+.contact .container .contact-content form .form__email {
+  margin-bottom: 110px;
+}
+
+.contact .container .contact-content button {
+  width: 100%;
+  height: 50px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 /*# sourceMappingURL=style.css.map */
